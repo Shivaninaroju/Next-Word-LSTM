@@ -23,6 +23,7 @@ def predict_next_word(model, tokenizer, text, max_sequence_len):
     # Padding the tokens to have same input dimensions:
     token_list = pad_sequences([token_list], maxlen=max_sequence_len-1, padding='pre')
 
+    
     # Prediction
     predicted = model.predict(token_list, verbose=0)
 
